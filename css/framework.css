@@ -1,0 +1,140 @@
+:root{
+    --bgc-b : #0075ff;
+    --bgc-hover : #0669da;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+
+:focus{
+    outline: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+body{
+    background-color: #f2f2f2;
+    /* font-family: 'open'; */
+    /* font-family: "Font Awesome 6 Free"; */
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Flex */
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.active{
+    background-color: #eee;
+}
+
+/* Grid */
+.g-auto-300{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px , 1fr));
+    gap:1em;
+}
+/* Button */
+.button{
+    background-color:var(--bgc-b);
+    color: #fff;
+    font-size: .8em;
+    border: none;
+    padding: .3em .5em;
+    border-radius: 4px;
+}
+.button:hover{
+    background-color: var(--bgc-hover);
+}
+/* Seclect */
+.select{
+    position: relative;
+    border-radius: 50px;
+    
+    width: 80px;
+    background-color: #ddd;
+    height: 30px;
+    overflow: hidden;
+
+}
+.select input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 0;
+}
+.select >div{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: .3em;
+    transition: .3s;
+    z-index: 2;
+}
+.select div::before{
+    font-family: "Font Awesome 6 Free";
+    content: "\f00d";
+    font-weight: 900;
+    display: block;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 2px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    color:#777;
+    border-radius: 50%;
+    left: 2px;
+    transition: .3s;
+}
+.select input:checked + div::before{
+    content: "\f00c";
+    left: calc(100% - 26px);
+    color: var(--bgc-b);
+    
+
+}
+.select input:checked + div {
+   
+    background-color: #0075ff;
+}
+
+
+
+/* Color */
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+.c-777{
+    color: #777;
+}
+
+
+.dashboard-show {
+    display: flex ;
+}
+
+.hidden {
+    display: none !important;
+}
