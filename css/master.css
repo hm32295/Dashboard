@@ -53,6 +53,7 @@ aside ul{
 aside ul li{
     padding: .6em .6em;
     width: 90%;
+    cursor: pointer;
     
     
 }
